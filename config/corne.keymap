@@ -15,8 +15,8 @@
 #define FLR 3
 #define ADJ 4
 
-#define HM_TAPPING_TERM 300
-#define HM_TAPPING_TERM_FAST 200
+#define HM_TAPPING_TERM 220
+#define HM_TAPPING_TERM_FAST 220
 #define HM_PRIOR_IDLE 150
 #define HM_QUICK_TAP 175
 
@@ -57,7 +57,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <HM_TAPPING_TERM>;
             quick-tap-ms = <HM_QUICK_TAP>;
             require-prior-idle-ms = <HM_PRIOR_IDLE>;
@@ -71,7 +71,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <HM_TAPPING_TERM>;
             quick-tap-ms = <HM_QUICK_TAP>;
             require-prior-idle-ms = <HM_PRIOR_IDLE>;
@@ -85,7 +85,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <HM_TAPPING_TERM_FAST>;
             quick-tap-ms = <HM_QUICK_TAP>;
             require-prior-idle-ms = <HM_PRIOR_IDLE>;
@@ -97,7 +97,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <HM_TAPPING_TERM_FAST>;
             quick-tap-ms = <HM_QUICK_TAP>;
             require-prior-idle-ms = <HM_PRIOR_IDLE>;
@@ -206,6 +206,12 @@
             timeout-ms = <20>;
         };
 
+        SaveFile {
+            bindings = <&kp LG(S)>;
+            key-positions = <14 15>;
+            timeout-ms = <30>;
+        };
+
         PipeSign {
             bindings = <&kp PIPE>;
             key-positions = <8 9>;
@@ -307,4 +313,4 @@
             >;
         };
     };
-
+};
