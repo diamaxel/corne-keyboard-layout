@@ -9,17 +9,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define DEF 0
-#define LWR 1
-#define RSE 2
-#define FLR 3
-#define ADJ 4
-
-#define HM_TAPPING_TERM 220
-#define HM_TAPPING_TERM_FAST 220
-#define HM_PRIOR_IDLE 150
-#define HM_QUICK_TAP 175
-
 &lt { quick_tap_ms = <219>; };
 
 &mt { quick_tap_ms = <219>; };
@@ -58,11 +47,8 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <HM_TAPPING_TERM>;
-            quick-tap-ms = <HM_QUICK_TAP>;
-            require-prior-idle-ms = <HM_PRIOR_IDLE>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
-            hold-trigger-on-release;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <250>;
         };
 
         HML: HML {
@@ -72,11 +58,8 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <HM_TAPPING_TERM>;
-            quick-tap-ms = <HM_QUICK_TAP>;
-            require-prior-idle-ms = <HM_PRIOR_IDLE>;
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
-            hold-trigger-on-release;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <250>;
         };
 
         HMRS: HMRS {
@@ -86,9 +69,8 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <HM_TAPPING_TERM_FAST>;
-            quick-tap-ms = <HM_QUICK_TAP>;
-            require-prior-idle-ms = <HM_PRIOR_IDLE>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <250>;
         };
 
         HMLS: HMLS {
@@ -98,9 +80,8 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <HM_TAPPING_TERM_FAST>;
-            quick-tap-ms = <HM_QUICK_TAP>;
-            require-prior-idle-ms = <HM_PRIOR_IDLE>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <250>;
         };
     };
 
